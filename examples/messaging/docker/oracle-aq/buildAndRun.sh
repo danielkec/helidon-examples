@@ -15,7 +15,6 @@
 # limitations under the License.
 #
 
-BASE_IMAGE_NAME=oracle/database:${ORA_DB_VERSION}-xe
 IMAGE_NAME=helidon/oracle-aq-example
 CONTAINER_NAME=oracle-aq-example
 

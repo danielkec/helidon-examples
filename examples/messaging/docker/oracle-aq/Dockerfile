@@ -13,17 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-#FROM container-registry.oracle.com/database/express:latest AS base
-#ENV ORACLE_PWD=frank
-#ENV ORACLE_ALLOW_REMOTE=true
-#ENV ORACLE_SID=XE
-#ENV PORT=1521
-#
-#COPY --chmod=777 init.sql /opt/oracle/scripts/startup/
-#EXPOSE ${PORT}
-
-
 FROM container-registry.oracle.com/database/express:latest
 
 ENV "ORACLE_PWsD"="frank"
@@ -32,5 +21,4 @@ ENV "ORACLE_ALLOW_REMOTE"="true"
 ENV "ORACLE_SID"="XE"
 ENV "PORT"="1521"
 COPY ["init.sql","/opt/oracle/scripts/startup/"]
-RUN ls -la /opt/oracle/scripts/startup/init.sql
 EXPOSE 1521
