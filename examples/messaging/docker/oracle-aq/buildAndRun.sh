@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # Copyright (c) 2020, 2024 Oracle and/or its affiliates.
 #
@@ -14,7 +15,9 @@
 # limitations under the License.
 #
 
-FROM oracle/database:18.4.0-xe as base
+BASE_IMAGE_NAME=oracle/database:${ORA_DB_VERSION}-xe
+IMAGE_NAME=helidon/oracle-aq-example
+CONTAINER_NAME=oracle-aq-example
 
-
-COPY init.sql /docker-entrypoint-initdb.d/setup/
+docker build -t ${IMAGE_NAME} . -f Dockerfile
+docker run -p 1521:1521 --rm --name ${CONTAINER_NAME} ${IMAGE_NAME}

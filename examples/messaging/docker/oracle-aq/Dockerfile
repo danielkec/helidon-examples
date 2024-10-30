@@ -1,4 +1,3 @@
-#!/bin/bash
 #
 # Copyright (c) 2020, 2024 Oracle and/or its affiliates.
 #
@@ -15,6 +14,23 @@
 # limitations under the License.
 #
 
-docker stop oracle-aq-example
-docker container rm oracle-aq-example
-docker image rm helidon/oracle-aq-example:latest
+#FROM container-registry.oracle.com/database/express:latest AS base
+#ENV ORACLE_PWD=frank
+#ENV ORACLE_ALLOW_REMOTE=true
+#ENV ORACLE_SID=XE
+#ENV PORT=1521
+#
+#COPY --chmod=777 init.sql /opt/oracle/scripts/startup/
+#EXPOSE ${PORT}
+
+
+FROM container-registry.oracle.com/database/express:latest
+
+ENV "ORACLE_PWsD"="frank"
+ENV "ORACLE_PWD"="frank"
+ENV "ORACLE_ALLOW_REMOTE"="true"
+ENV "ORACLE_SID"="XE"
+ENV "PORT"="1521"
+COPY ["init.sql","/opt/oracle/scripts/startup/"]
+RUN ls -la /opt/oracle/scripts/startup/init.sql
+EXPOSE 1521
