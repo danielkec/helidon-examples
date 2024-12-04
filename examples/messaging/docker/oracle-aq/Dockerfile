@@ -15,7 +15,6 @@
 #
 FROM container-registry.oracle.com/database/express:latest
 
-ENV "ORACLE_PWsD"="frank"
 ENV "ORACLE_PWD"="frank"
 ENV "ORACLE_ALLOW_REMOTE"="true"
 ENV "ORACLE_SID"="XE"
