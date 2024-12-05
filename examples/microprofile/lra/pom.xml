@@ -36,6 +36,10 @@
         Microprofile Long Running Actions Example
     </description>
 
+    <properties>
+        <version.lib.awaitility>4.2.0</version.lib.awaitility>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>io.helidon.microprofile.bundles</groupId>
@@ -83,7 +87,7 @@
         <dependency>
             <groupId>org.awaitility</groupId>
             <artifactId>awaitility</artifactId>
-            <version>4.2.0</version>
+            <version>${version.lib.awaitility}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
