@@ -69,8 +69,6 @@
             <groupId>io.helidon.microprofile.lra</groupId>
             <artifactId>helidon-microprofile-lra-testing</artifactId>
             <scope>test</scope>
-            <!-- TODO: REMOVE ME!!! -->
-            <version>4.1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
