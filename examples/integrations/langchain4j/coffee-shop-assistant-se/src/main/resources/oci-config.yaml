@@ -1,0 +1,10 @@
+helidon.oci:
+  authentication-method: "config"
+  authentication:
+    config:
+      region: eu-frankfurt-1
+      fingerprint: "b7:a7:9c:7f:57:a7:74:ad:c2:fa:d4:31:06:b5:02:f5"
+      tenant-id: "ocid1.tenancy.oc1..aaaaaaaaonou3anbsghdg723hfoodyj3y6gmx3kqma5dcou4n2fh2setk6ta"
+      user-id: "ocid1.user.oc1..aaaaaaaap73kjulcr37txze7oncyc2ypcqxdac7y6iu63zswkpff3nrvc6hq"
+      private-key:
+        path: "${OCI_GENAI_TEST_KEY}"

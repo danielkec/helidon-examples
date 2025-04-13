@@ -18,11 +18,12 @@ server:
   port: 8080
 
 langchain4j:
-  open-ai:
+  oracle-genai:
     chat-model:
       enabled: true
-      api-key: "demo"
-      model-name: "gpt-4o-mini"
+      compartment-id: "ocid1.tenancy.oc1..aaaaaaaaonou3anbsghdg723hfoodyj3y6gmx3kqma5dcou4n2fh2setk6ta"
+      chat-model-id: "ocid1.generativeaimodel.oc1.eu-frankfurt-1.amaaaaaask7dceya4tdabclcsqbc3yj2mozvvqoq5ccmliv3354hfu3mx6bq"
+
   rag:
     embedding-store-content-retriever:
       enabled: true

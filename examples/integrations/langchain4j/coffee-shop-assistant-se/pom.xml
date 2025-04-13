@@ -45,7 +45,7 @@
         <dependencies>
             <dependency>
                 <groupId>dev.langchain4j</groupId>
-                <artifactId>langchain4j-embeddings-all-minilm-l6-v2</artifactId>
+                <artifactId>langchain4j-embeddings-all-minilm-l6-v2-q</artifactId>
                 <version>${version.lib.langchain4j}</version>
             </dependency>
         </dependencies>
@@ -58,8 +58,23 @@
         </dependency>
         <dependency>
             <groupId>io.helidon.integrations.langchain4j.providers</groupId>
-            <artifactId>helidon-integrations-langchain4j-providers-open-ai</artifactId>
+            <artifactId>helidon-integrations-langchain4j-providers-oracle-genai</artifactId>
+            <version>4.2.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>io.helidon.integrations.oci.sdk</groupId>
+            <artifactId>helidon-integrations-oci-sdk-runtime</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.helidon.integrations.oci</groupId>
+            <artifactId>helidon-integrations-oci</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.oci.sdk</groupId>
+            <artifactId>oci-java-sdk-common-httpclient-jersey3</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
         <dependency>
             <groupId>io.helidon.webserver</groupId>
             <artifactId>helidon-webserver</artifactId>
@@ -74,7 +89,7 @@
         </dependency>
         <dependency>
             <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-embeddings-all-minilm-l6-v2</artifactId>
+            <artifactId>langchain4j-embeddings-all-minilm-l6-v2-q</artifactId>
         </dependency>
         <dependency>
             <groupId>io.helidon.logging</groupId>
